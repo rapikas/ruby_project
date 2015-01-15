@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @electoral_district.name %>
+</p>
+
+<p>
+  <b>Valid votes:</b>
+  <%= @electoral_district.valid_votes %>
+</p>
+
+<p>
+  <b>Voivodship:</b>
+  <%= @electoral_district.voivodship %>
+</p>
+
+
+<%= link_to 'Edit', edit_electoral_district_path(@electoral_district) %> |
+<%= link_to 'Back', electoral_districts_path %>

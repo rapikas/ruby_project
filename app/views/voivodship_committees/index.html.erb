@@ -1,0 +1,25 @@
+<h1>Listing voivodship_committees</h1>
+
+<table>
+  <tr>
+    <th>Committee</th>
+    <th>Voivodship</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @voivodship_committees.each do |voivodship_committee| %>
+  <tr>
+    <td><%= voivodship_committee.committee %></td>
+    <td><%= voivodship_committee.voivodship %></td>
+    <td><%= link_to 'Show', voivodship_committee %></td>
+    <td><%= link_to 'Edit', edit_voivodship_committee_path(voivodship_committee) %></td>
+    <td><%= link_to 'Destroy', voivodship_committee, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Voivodship committee', new_voivodship_committee_path %>

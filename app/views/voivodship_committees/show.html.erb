@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Committee:</b>
+  <%= @voivodship_committee.committee %>
+</p>
+
+<p>
+  <b>Voivodship:</b>
+  <%= @voivodship_committee.voivodship %>
+</p>
+
+
+<%= link_to 'Edit', edit_voivodship_committee_path(@voivodship_committee) %> |
+<%= link_to 'Back', voivodship_committees_path %>

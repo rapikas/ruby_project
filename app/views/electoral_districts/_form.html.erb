@@ -1,0 +1,29 @@
+<%= form_for(@electoral_district) do |f| %>
+  <% if @electoral_district.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@electoral_district.errors.count, "error") %> prohibited this electoral_district from being saved:</h2>
+
+      <ul>
+      <% @electoral_district.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :valid_votes %><br />
+    <%= f.number_field :valid_votes %>
+  </div>
+  <div class="field">
+    <%= f.label :voivodship %><br />
+    <%= f.text_field :voivodship %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

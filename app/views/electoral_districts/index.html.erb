@@ -1,0 +1,27 @@
+<h1>Listing electoral_districts</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Valid votes</th>
+    <th>Voivodship</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @electoral_districts.each do |electoral_district| %>
+  <tr>
+    <td><%= electoral_district.name %></td>
+    <td><%= electoral_district.valid_votes %></td>
+    <td><%= electoral_district.voivodship %></td>
+    <td><%= link_to 'Show', electoral_district %></td>
+    <td><%= link_to 'Edit', edit_electoral_district_path(electoral_district) %></td>
+    <td><%= link_to 'Destroy', electoral_district, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Electoral district', new_electoral_district_path %>

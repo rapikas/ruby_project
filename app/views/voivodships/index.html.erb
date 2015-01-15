@@ -1,0 +1,23 @@
+<h1>Listing voivodships</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @voivodships.each do |voivodship| %>
+  <tr>
+    <td><%= voivodship.name %></td>
+    <td><%= link_to 'Show', voivodship %></td>
+    <td><%= link_to 'Edit', edit_voivodship_path(voivodship) %></td>
+    <td><%= link_to 'Destroy', voivodship, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Voivodship', new_voivodship_path %>

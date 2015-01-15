@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  valid_votes: 1
+  voivodship: 
+
+two:
+  name: MyString
+  valid_votes: 1
+  voivodship: 
