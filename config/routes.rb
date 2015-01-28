@@ -1,4 +1,6 @@
 Elections::Application.routes.draw do
+  ActiveAdmin.routes(self)
+
   resources :add_login_to_users
 
 
