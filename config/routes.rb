@@ -1,4 +1,7 @@
 Elections::Application.routes.draw do
+  resources :add_login_to_users
+
+
   resources :votes
 
 

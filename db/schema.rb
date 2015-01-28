@@ -11,13 +11,26 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150115185918) do
+ActiveRecord::Schema.define(:version => 20150127215425) do
 
   create_table "committees", :force => true do |t|
     t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+    t.string   "logo_name"
+    t.string   "logo_filepath"
+    t.string   "logo_fileurl"
   end
+
+  create_table "committees_voivodships", :force => true do |t|
+    t.integer  "committee_id"
+    t.integer  "voivodship_id"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
+  add_index "committees_voivodships", ["committee_id"], :name => "index_voivodship_committees_on_committee_id"
+  add_index "committees_voivodships", ["voivodship_id"], :name => "index_voivodship_committees_on_voivodship_id"
 
   create_table "electoral_districts", :force => true do |t|
     t.string   "name"
@@ -25,6 +38,7 @@ ActiveRecord::Schema.define(:version => 20150115185918) do
     t.integer  "voivodship_id"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
+    t.integer  "invalid_votes"
   end
 
   add_index "electoral_districts", ["voivodship_id"], :name => "index_electoral_districts_on_voivodship_id"
@@ -35,19 +49,12 @@ ActiveRecord::Schema.define(:version => 20150115185918) do
     t.integer  "electoral_district_id"
     t.datetime "created_at",            :null => false
     t.datetime "updated_at",            :null => false
+    t.string   "login"
+    t.string   "password"
+    t.string   "role"
   end
 
   add_index "users", ["electoral_district_id"], :name => "index_users_on_electoral_district_id"
-
-  create_table "voivodship_committees", :force => true do |t|
-    t.integer  "committee_id"
-    t.integer  "voivodship_id"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
-  end
-
-  add_index "voivodship_committees", ["committee_id"], :name => "index_voivodship_committees_on_committee_id"
-  add_index "voivodship_committees", ["voivodship_id"], :name => "index_voivodship_committees_on_voivodship_id"
 
   create_table "voivodships", :force => true do |t|
     t.string   "name"

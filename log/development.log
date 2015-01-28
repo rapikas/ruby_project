@@ -432,3 +432,1015 @@ Migrating to CreateVotes (20150115185918)
   [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20150115185918')[0m
   [1m[35m (105.5ms)[0m  commit transaction
   [1m[36m (0.6ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (19.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateCommittees (20150115184450)
+Migrating to CreateVoivodships (20150115184900)
+Migrating to CreateVoivodshipCommittees (20150115185117)
+Migrating to CreateElectoralDistricts (20150115185508)
+Migrating to CreateUsers (20150115185722)
+Migrating to CreateVotes (20150115185918)
+Migrating to CreateAddLoginToUsers (20150124180126)
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.8ms)[0m  CREATE TABLE "add_login_to_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20150124180126')[0m
+  [1m[35m (117.0ms)[0m  commit transaction
+  [1m[36m (0.6ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (6.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.6ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreateAddLoginToUsers (20150124180126)
+  [1m[36m (0.3ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (1.7ms)[0m  [1mDROP TABLE "add_login_to_users"[0m
+  [1m[35m (0.6ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20150124180126'
+  [1m[36m (121.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.7ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (28.7ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateCommittees (20150115184450)
+Migrating to CreateVoivodships (20150115184900)
+Migrating to CreateVoivodshipCommittees (20150115185117)
+Migrating to CreateElectoralDistricts (20150115185508)
+Migrating to CreateUsers (20150115185722)
+Migrating to CreateVotes (20150115185918)
+Migrating to AddDetailsToUsers (20150127202806)
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.7ms)[0m  ALTER TABLE "users" ADD "login" varchar(255)
+  [1m[36m (1.0ms)[0m  [1mALTER TABLE "users" ADD "password" varchar(255)[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20150127202806')
+  [1m[36m (104.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.7ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (5.9ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateCommittees (20150115184450)
+Migrating to CreateVoivodships (20150115184900)
+Migrating to CreateVoivodshipCommittees (20150115185117)
+Migrating to CreateElectoralDistricts (20150115185508)
+Migrating to CreateUsers (20150115185722)
+Migrating to CreateVotes (20150115185918)
+Migrating to AddDetailsToUsers (20150127202806)
+Migrating to AddInvalidVotesToElectoralDistricts (20150127205057)
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (2.0ms)[0m  ALTER TABLE "electoral_districts" ADD "invalid_votes" integer
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20150127205057')[0m
+  [1m[35m (96.8ms)[0m  commit transaction
+  [1m[36m (0.8ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (6.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateCommittees (20150115184450)
+Migrating to CreateVoivodships (20150115184900)
+Migrating to CreateVoivodshipCommittees (20150115185117)
+Migrating to CreateElectoralDistricts (20150115185508)
+Migrating to CreateUsers (20150115185722)
+Migrating to CreateVotes (20150115185918)
+Migrating to AddDetailsToUsers (20150127202806)
+Migrating to AddInvalidVotesToElectoralDistricts (20150127205057)
+Migrating to AddDetailsToCommittees (20150127205614)
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.9ms)[0m  ALTER TABLE "committees" ADD "logo_name" varchar(255)
+  [1m[36m (0.9ms)[0m  [1mALTER TABLE "committees" ADD "logo_filepath" varchar(255)[0m
+  [1m[35m (0.9ms)[0m  ALTER TABLE "committees" ADD "logo_fileurl" varchar(255)
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20150127205614')[0m
+  [1m[35m (124.5ms)[0m  commit transaction
+  [1m[36m (0.8ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (6.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateCommittees (20150115184450)
+Migrating to CreateVoivodships (20150115184900)
+Migrating to CreateVoivodshipCommittees (20150115185117)
+Migrating to CreateElectoralDistricts (20150115185508)
+Migrating to CreateUsers (20150115185722)
+Migrating to CreateVotes (20150115185918)
+Migrating to AddDetailsToUsers (20150127202806)
+Migrating to AddInvalidVotesToElectoralDistricts (20150127205057)
+Migrating to AddDetailsToCommittees (20150127205614)
+Migrating to AddRolesToUsers (20150127213232)
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.8ms)[0m  ALTER TABLE "users" ADD "role" varchar(255)
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20150127213232')[0m
+  [1m[35m (105.2ms)[0m  commit transaction
+  [1m[36m (0.7ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (6.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateCommittees (20150115184450)
+Migrating to CreateVoivodships (20150115184900)
+Migrating to CreateVoivodshipCommittees (20150115185117)
+Migrating to CreateElectoralDistricts (20150115185508)
+Migrating to CreateUsers (20150115185722)
+Migrating to CreateVotes (20150115185918)
+Migrating to AddDetailsToUsers (20150127202806)
+Migrating to AddInvalidVotesToElectoralDistricts (20150127205057)
+Migrating to AddDetailsToCommittees (20150127205614)
+Migrating to AddRolesToUsers (20150127213232)
+Migrating to DropTable (20150127214119)
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20150127214119')
+  [1m[36m (118.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.8ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+  [1m[36m (6.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.7ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to DropTable (20150127214119)
+  [1m[36m (0.3ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (1.1ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20150127214119'[0m
+  [1m[35m (392.8ms)[0m  commit transaction
+  [1m[36m (0.8ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (6.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateCommittees (20150115184450)
+Migrating to CreateVoivodships (20150115184900)
+Migrating to CreateVoivodshipCommittees (20150115185117)
+Migrating to CreateElectoralDistricts (20150115185508)
+Migrating to CreateUsers (20150115185722)
+Migrating to CreateVotes (20150115185918)
+Migrating to AddDetailsToUsers (20150127202806)
+Migrating to AddInvalidVotesToElectoralDistricts (20150127205057)
+Migrating to AddDetailsToCommittees (20150127205614)
+Migrating to AddRolesToUsers (20150127213232)
+Migrating to RenameTable (20150127215425)
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (2.1ms)[0m  ALTER TABLE "voivodship_committees" RENAME TO "committees_voivodships"
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20150127215425')[0m
+  [1m[35m (107.8ms)[0m  commit transaction
+  [1m[36m (0.7ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2015-01-27 23:15:03 +0100
+Connecting to database specified by database.yml
+Served asset /rails.png - 200 OK (36ms)
+
+
+Started GET "/committees" for 127.0.0.1 at 2015-01-27 23:15:17 +0100
+
+SyntaxError (/home/ina/ruby_project/elections/app/models/committee.rb:4: syntax error, unexpected ':', expecting keyword_end
+  attr_accessible :name :logo_name
+                         ^):
+  app/controllers/committees_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.erb (7.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_request_and_response.erb (69.7ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (128.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-01-27 23:15:44 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  Rendered users/index.html.erb within layouts/application (6.6ms)
+Warning. Error encountered while saving cache /home/ina/ruby_project/elections/tmp/cache/sass/41c34f90258ef7544a90603b7e2773c5d82f4865/add_login_to_users.css.scssc: can't dump anonymous class #<Class:0x926ac9c>
+Compiled add_login_to_users.css  (29ms)  (pid 2719)
+Warning. Error encountered while saving cache /home/ina/ruby_project/elections/tmp/cache/sass/41c34f90258ef7544a90603b7e2773c5d82f4865/electoral_districts.css.scssc: can't dump anonymous class #<Class:0x926ac9c>
+Compiled electoral_districts.css  (7ms)  (pid 2719)
+Warning. Error encountered while saving cache /home/ina/ruby_project/elections/tmp/cache/sass/41c34f90258ef7544a90603b7e2773c5d82f4865/users.css.scssc: can't dump anonymous class #<Class:0x926ac9c>
+Compiled users.css  (7ms)  (pid 2719)
+Warning. Error encountered while saving cache /home/ina/ruby_project/elections/tmp/cache/sass/41c34f90258ef7544a90603b7e2773c5d82f4865/voivodship_committees.css.scssc: can't dump anonymous class #<Class:0x926ac9c>
+Compiled voivodship_committees.css  (10ms)  (pid 2719)
+Warning. Error encountered while saving cache /home/ina/ruby_project/elections/tmp/cache/sass/41c34f90258ef7544a90603b7e2773c5d82f4865/votes.css.scssc: can't dump anonymous class #<Class:0x926ac9c>
+Compiled votes.css  (7ms)  (pid 2719)
+Compiled application.css  (329ms)  (pid 2719)
+Compiled add_login_to_users.js  (352ms)  (pid 2719)
+Compiled electoral_districts.js  (5ms)  (pid 2719)
+Compiled users.js  (3ms)  (pid 2719)
+Compiled voivodship_committees.js  (3ms)  (pid 2719)
+Compiled votes.js  (4ms)  (pid 2719)
+Compiled application.js  (623ms)  (pid 2719)
+Completed 200 OK in 1468.3ms (Views: 1255.3ms | ActiveRecord: 13.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-27 23:15:46 +0100
+Served asset /application.css - 200 OK (143ms)
+
+
+Started GET "/assets/add_login_to_users.css?body=1" for 127.0.0.1 at 2015-01-27 23:15:46 +0100
+Served asset /add_login_to_users.css - 200 OK (16ms)
+
+
+Started GET "/assets/committees.css?body=1" for 127.0.0.1 at 2015-01-27 23:15:46 +0100
+Served asset /committees.css - 200 OK (14ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-01-27 23:15:46 +0100
+Served asset /users.css - 200 OK (25ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-27 23:15:46 +0100
+Served asset /scaffolds.css - 200 OK (12ms)
+
+
+Started GET "/assets/electoral_districts.css?body=1" for 127.0.0.1 at 2015-01-27 23:15:46 +0100
+Served asset /electoral_districts.css - 200 OK (14ms)
+
+
+Started GET "/assets/voivodship_committees.css?body=1" for 127.0.0.1 at 2015-01-27 23:15:46 +0100
+Served asset /voivodship_committees.css - 200 OK (12ms)
+
+
+Started GET "/assets/voivodships.css?body=1" for 127.0.0.1 at 2015-01-27 23:15:46 +0100
+Served asset /voivodships.css - 200 OK (10ms)
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2015-01-27 23:15:47 +0100
+Served asset /votes.css - 200 OK (12ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-27 23:15:47 +0100
+Served asset /jquery.js - 200 OK (30ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-27 23:15:47 +0100
+Served asset /jquery_ujs.js - 200 OK (34ms)
+
+
+Started GET "/assets/add_login_to_users.js?body=1" for 127.0.0.1 at 2015-01-27 23:15:47 +0100
+Served asset /add_login_to_users.js - 200 OK (11ms)
+
+
+Started GET "/assets/committees.js?body=1" for 127.0.0.1 at 2015-01-27 23:15:47 +0100
+Served asset /committees.js - 200 OK (11ms)
+
+
+Started GET "/assets/electoral_districts.js?body=1" for 127.0.0.1 at 2015-01-27 23:15:47 +0100
+Served asset /electoral_districts.js - 200 OK (23ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-01-27 23:15:47 +0100
+Served asset /users.js - 200 OK (12ms)
+
+
+Started GET "/assets/voivodship_committees.js?body=1" for 127.0.0.1 at 2015-01-27 23:15:47 +0100
+Served asset /voivodship_committees.js - 200 OK (12ms)
+
+
+Started GET "/assets/voivodships.js?body=1" for 127.0.0.1 at 2015-01-27 23:15:47 +0100
+Served asset /voivodships.js - 200 OK (13ms)
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2015-01-27 23:15:47 +0100
+Served asset /votes.js - 200 OK (13ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-27 23:15:47 +0100
+Served asset /application.js - 200 OK (80ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2015-01-27 23:15:52 +0100
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (208.2ms)
+  Rendered users/new.html.erb within layouts/application (247.0ms)
+Completed 200 OK in 373.2ms (Views: 300.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-27 23:15:52 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/electoral_districts.css?body=1" for 127.0.0.1 at 2015-01-27 23:15:52 +0100
+Served asset /electoral_districts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-27 23:15:52 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/add_login_to_users.css?body=1" for 127.0.0.1 at 2015-01-27 23:15:52 +0100
+Served asset /add_login_to_users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-01-27 23:15:52 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/committees.css?body=1" for 127.0.0.1 at 2015-01-27 23:15:52 +0100
+Served asset /committees.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/voivodship_committees.css?body=1" for 127.0.0.1 at 2015-01-27 23:15:52 +0100
+Served asset /voivodship_committees.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-27 23:15:52 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2015-01-27 23:15:52 +0100
+Served asset /votes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-27 23:15:52 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/voivodships.css?body=1" for 127.0.0.1 at 2015-01-27 23:15:52 +0100
+Served asset /voivodships.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/add_login_to_users.js?body=1" for 127.0.0.1 at 2015-01-27 23:15:52 +0100
+Served asset /add_login_to_users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/committees.js?body=1" for 127.0.0.1 at 2015-01-27 23:15:52 +0100
+Served asset /committees.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/electoral_districts.js?body=1" for 127.0.0.1 at 2015-01-27 23:15:53 +0100
+Served asset /electoral_districts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-01-27 23:15:53 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/voivodship_committees.js?body=1" for 127.0.0.1 at 2015-01-27 23:15:53 +0100
+Served asset /voivodship_committees.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2015-01-27 23:15:53 +0100
+Served asset /votes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/voivodships.js?body=1" for 127.0.0.1 at 2015-01-27 23:15:53 +0100
+Served asset /voivodships.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-27 23:15:53 +0100
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/committees" for 127.0.0.1 at 2015-01-27 23:16:50 +0100
+Processing by CommitteesController#index as HTML
+  [1m[35mCommittee Load (0.8ms)[0m  SELECT "committees".* FROM "committees" 
+  Rendered committees/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 104.8ms (Views: 85.2ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-27 23:16:51 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-01-27 23:16:51 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-27 23:16:51 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/add_login_to_users.css?body=1" for 127.0.0.1 at 2015-01-27 23:16:51 +0100
+Served asset /add_login_to_users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/committees.css?body=1" for 127.0.0.1 at 2015-01-27 23:16:51 +0100
+Served asset /committees.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/electoral_districts.css?body=1" for 127.0.0.1 at 2015-01-27 23:16:51 +0100
+Served asset /electoral_districts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/voivodship_committees.css?body=1" for 127.0.0.1 at 2015-01-27 23:16:51 +0100
+Served asset /voivodship_committees.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2015-01-27 23:16:51 +0100
+Served asset /votes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/voivodships.css?body=1" for 127.0.0.1 at 2015-01-27 23:16:51 +0100
+Served asset /voivodships.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-27 23:16:51 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-27 23:16:51 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/add_login_to_users.js?body=1" for 127.0.0.1 at 2015-01-27 23:16:51 +0100
+Served asset /add_login_to_users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/committees.js?body=1" for 127.0.0.1 at 2015-01-27 23:16:51 +0100
+Served asset /committees.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/electoral_districts.js?body=1" for 127.0.0.1 at 2015-01-27 23:16:51 +0100
+Served asset /electoral_districts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/voivodship_committees.js?body=1" for 127.0.0.1 at 2015-01-27 23:16:51 +0100
+Served asset /voivodship_committees.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-01-27 23:16:51 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/voivodships.js?body=1" for 127.0.0.1 at 2015-01-27 23:16:51 +0100
+Served asset /voivodships.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2015-01-27 23:16:52 +0100
+Served asset /votes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-27 23:16:52 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/committees/new" for 127.0.0.1 at 2015-01-27 23:16:54 +0100
+Processing by CommitteesController#new as HTML
+  Rendered committees/_form.html.erb (20.7ms)
+  Rendered committees/new.html.erb within layouts/application (44.0ms)
+Completed 200 OK in 142.4ms (Views: 91.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-27 23:16:54 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/add_login_to_users.css?body=1" for 127.0.0.1 at 2015-01-27 23:16:54 +0100
+Served asset /add_login_to_users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-01-27 23:16:54 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-27 23:16:54 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/electoral_districts.css?body=1" for 127.0.0.1 at 2015-01-27 23:16:54 +0100
+Served asset /electoral_districts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/committees.css?body=1" for 127.0.0.1 at 2015-01-27 23:16:54 +0100
+Served asset /committees.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/voivodship_committees.css?body=1" for 127.0.0.1 at 2015-01-27 23:16:54 +0100
+Served asset /voivodship_committees.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/voivodships.css?body=1" for 127.0.0.1 at 2015-01-27 23:16:54 +0100
+Served asset /voivodships.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-27 23:16:54 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2015-01-27 23:16:54 +0100
+Served asset /votes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-27 23:16:54 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/committees.js?body=1" for 127.0.0.1 at 2015-01-27 23:16:54 +0100
+Served asset /committees.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/add_login_to_users.js?body=1" for 127.0.0.1 at 2015-01-27 23:16:54 +0100
+Served asset /add_login_to_users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/electoral_districts.js?body=1" for 127.0.0.1 at 2015-01-27 23:16:55 +0100
+Served asset /electoral_districts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-01-27 23:16:55 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/voivodship_committees.js?body=1" for 127.0.0.1 at 2015-01-27 23:16:55 +0100
+Served asset /voivodship_committees.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/voivodships.js?body=1" for 127.0.0.1 at 2015-01-27 23:16:55 +0100
+Served asset /voivodships.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2015-01-27 23:16:55 +0100
+Served asset /votes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-27 23:16:55 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/voivodships" for 127.0.0.1 at 2015-01-27 23:17:04 +0100
+Processing by VoivodshipsController#index as HTML
+  [1m[36mVoivodship Load (0.6ms)[0m  [1mSELECT "voivodships".* FROM "voivodships" [0m
+  Rendered voivodships/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 75.1ms (Views: 64.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-27 23:17:04 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/add_login_to_users.css?body=1" for 127.0.0.1 at 2015-01-27 23:17:04 +0100
+Served asset /add_login_to_users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-27 23:17:04 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/electoral_districts.css?body=1" for 127.0.0.1 at 2015-01-27 23:17:04 +0100
+Served asset /electoral_districts.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/committees.css?body=1" for 127.0.0.1 at 2015-01-27 23:17:04 +0100
+Served asset /committees.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-01-27 23:17:04 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/voivodship_committees.css?body=1" for 127.0.0.1 at 2015-01-27 23:17:04 +0100
+Served asset /voivodship_committees.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/voivodships.css?body=1" for 127.0.0.1 at 2015-01-27 23:17:05 +0100
+Served asset /voivodships.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2015-01-27 23:17:05 +0100
+Served asset /votes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-27 23:17:05 +0100
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-27 23:17:05 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/add_login_to_users.js?body=1" for 127.0.0.1 at 2015-01-27 23:17:05 +0100
+Served asset /add_login_to_users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/committees.js?body=1" for 127.0.0.1 at 2015-01-27 23:17:05 +0100
+Served asset /committees.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/electoral_districts.js?body=1" for 127.0.0.1 at 2015-01-27 23:17:05 +0100
+Served asset /electoral_districts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-27 23:17:05 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/voivodship_committees.js?body=1" for 127.0.0.1 at 2015-01-27 23:17:05 +0100
+Served asset /voivodship_committees.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/voivodships.js?body=1" for 127.0.0.1 at 2015-01-27 23:17:05 +0100
+Served asset /voivodships.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2015-01-27 23:17:05 +0100
+Served asset /votes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-01-27 23:17:05 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/voivodships/new" for 127.0.0.1 at 2015-01-27 23:17:09 +0100
+Processing by VoivodshipsController#new as HTML
+  Rendered voivodships/_form.html.erb (17.8ms)
+  Rendered voivodships/new.html.erb within layouts/application (34.7ms)
+Completed 200 OK in 125.7ms (Views: 94.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-27 23:17:09 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/add_login_to_users.css?body=1" for 127.0.0.1 at 2015-01-27 23:17:09 +0100
+Served asset /add_login_to_users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/committees.css?body=1" for 127.0.0.1 at 2015-01-27 23:17:09 +0100
+Served asset /committees.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-01-27 23:17:09 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-27 23:17:09 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/electoral_districts.css?body=1" for 127.0.0.1 at 2015-01-27 23:17:09 +0100
+Served asset /electoral_districts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/voivodship_committees.css?body=1" for 127.0.0.1 at 2015-01-27 23:17:09 +0100
+Served asset /voivodship_committees.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/voivodships.css?body=1" for 127.0.0.1 at 2015-01-27 23:17:09 +0100
+Served asset /voivodships.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2015-01-27 23:17:10 +0100
+Served asset /votes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-27 23:17:10 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-27 23:17:10 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/add_login_to_users.js?body=1" for 127.0.0.1 at 2015-01-27 23:17:10 +0100
+Served asset /add_login_to_users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/committees.js?body=1" for 127.0.0.1 at 2015-01-27 23:17:10 +0100
+Served asset /committees.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/electoral_districts.js?body=1" for 127.0.0.1 at 2015-01-27 23:17:10 +0100
+Served asset /electoral_districts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-01-27 23:17:10 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/voivodship_committees.js?body=1" for 127.0.0.1 at 2015-01-27 23:17:10 +0100
+Served asset /voivodship_committees.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/voivodships.js?body=1" for 127.0.0.1 at 2015-01-27 23:17:10 +0100
+Served asset /voivodships.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2015-01-27 23:17:10 +0100
+Served asset /votes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-27 23:17:10 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/votes" for 127.0.0.1 at 2015-01-27 23:17:17 +0100
+Processing by VotesController#index as HTML
+  [1m[35mVote Load (0.5ms)[0m  SELECT "votes".* FROM "votes" 
+  Rendered votes/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 61.7ms (Views: 50.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-27 23:17:18 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/add_login_to_users.css?body=1" for 127.0.0.1 at 2015-01-27 23:17:18 +0100
+Served asset /add_login_to_users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/electoral_districts.css?body=1" for 127.0.0.1 at 2015-01-27 23:17:18 +0100
+Served asset /electoral_districts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/committees.css?body=1" for 127.0.0.1 at 2015-01-27 23:17:18 +0100
+Served asset /committees.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-01-27 23:17:18 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-27 23:17:18 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/voivodship_committees.css?body=1" for 127.0.0.1 at 2015-01-27 23:17:18 +0100
+Served asset /voivodship_committees.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/voivodships.css?body=1" for 127.0.0.1 at 2015-01-27 23:17:18 +0100
+Served asset /voivodships.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2015-01-27 23:17:18 +0100
+Served asset /votes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-27 23:17:18 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-27 23:17:18 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/add_login_to_users.js?body=1" for 127.0.0.1 at 2015-01-27 23:17:18 +0100
+Served asset /add_login_to_users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/committees.js?body=1" for 127.0.0.1 at 2015-01-27 23:17:18 +0100
+Served asset /committees.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/electoral_districts.js?body=1" for 127.0.0.1 at 2015-01-27 23:17:18 +0100
+Served asset /electoral_districts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-01-27 23:17:18 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/voivodship_committees.js?body=1" for 127.0.0.1 at 2015-01-27 23:17:18 +0100
+Served asset /voivodship_committees.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/voivodships.js?body=1" for 127.0.0.1 at 2015-01-27 23:17:18 +0100
+Served asset /voivodships.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2015-01-27 23:17:18 +0100
+Served asset /votes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-27 23:17:18 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/votes/new" for 127.0.0.1 at 2015-01-27 23:17:26 +0100
+Processing by VotesController#new as HTML
+  Rendered votes/_form.html.erb (27.4ms)
+  Rendered votes/new.html.erb within layouts/application (35.0ms)
+Completed 200 OK in 141.4ms (Views: 94.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-27 23:17:26 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/add_login_to_users.css?body=1" for 127.0.0.1 at 2015-01-27 23:17:26 +0100
+Served asset /add_login_to_users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/electoral_districts.css?body=1" for 127.0.0.1 at 2015-01-27 23:17:26 +0100
+Served asset /electoral_districts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-01-27 23:17:26 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/committees.css?body=1" for 127.0.0.1 at 2015-01-27 23:17:27 +0100
+Served asset /committees.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-27 23:17:27 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/voivodship_committees.css?body=1" for 127.0.0.1 at 2015-01-27 23:17:27 +0100
+Served asset /voivodship_committees.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/voivodships.css?body=1" for 127.0.0.1 at 2015-01-27 23:17:27 +0100
+Served asset /voivodships.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2015-01-27 23:17:27 +0100
+Served asset /votes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-27 23:17:27 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-27 23:17:27 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/add_login_to_users.js?body=1" for 127.0.0.1 at 2015-01-27 23:17:27 +0100
+Served asset /add_login_to_users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/committees.js?body=1" for 127.0.0.1 at 2015-01-27 23:17:27 +0100
+Served asset /committees.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/electoral_districts.js?body=1" for 127.0.0.1 at 2015-01-27 23:17:27 +0100
+Served asset /electoral_districts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-01-27 23:17:27 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/voivodship_committees.js?body=1" for 127.0.0.1 at 2015-01-27 23:17:27 +0100
+Served asset /voivodship_committees.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/voivodships.js?body=1" for 127.0.0.1 at 2015-01-27 23:17:27 +0100
+Served asset /voivodships.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2015-01-27 23:17:27 +0100
+Served asset /votes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-27 23:17:27 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/electoral_districts" for 127.0.0.1 at 2015-01-27 23:18:24 +0100
+Processing by ElectoralDistrictsController#index as HTML
+  [1m[36mElectoralDistrict Load (0.5ms)[0m  [1mSELECT "electoral_districts".* FROM "electoral_districts" [0m
+  Rendered electoral_districts/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 61.1ms (Views: 49.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-27 23:18:25 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/electoral_districts.css?body=1" for 127.0.0.1 at 2015-01-27 23:18:25 +0100
+Served asset /electoral_districts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/committees.css?body=1" for 127.0.0.1 at 2015-01-27 23:18:25 +0100
+Served asset /committees.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/add_login_to_users.css?body=1" for 127.0.0.1 at 2015-01-27 23:18:25 +0100
+Served asset /add_login_to_users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-01-27 23:18:25 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-27 23:18:25 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/voivodship_committees.css?body=1" for 127.0.0.1 at 2015-01-27 23:18:25 +0100
+Served asset /voivodship_committees.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2015-01-27 23:18:25 +0100
+Served asset /votes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/voivodships.css?body=1" for 127.0.0.1 at 2015-01-27 23:18:25 +0100
+Served asset /voivodships.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-27 23:18:25 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-27 23:18:25 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/add_login_to_users.js?body=1" for 127.0.0.1 at 2015-01-27 23:18:25 +0100
+Served asset /add_login_to_users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/committees.js?body=1" for 127.0.0.1 at 2015-01-27 23:18:25 +0100
+Served asset /committees.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/electoral_districts.js?body=1" for 127.0.0.1 at 2015-01-27 23:18:25 +0100
+Served asset /electoral_districts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-01-27 23:18:25 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/voivodship_committees.js?body=1" for 127.0.0.1 at 2015-01-27 23:18:25 +0100
+Served asset /voivodship_committees.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/voivodships.js?body=1" for 127.0.0.1 at 2015-01-27 23:18:25 +0100
+Served asset /voivodships.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2015-01-27 23:18:25 +0100
+Served asset /votes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-27 23:18:25 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/electoral_districts/new" for 127.0.0.1 at 2015-01-27 23:18:28 +0100
+Processing by ElectoralDistrictsController#new as HTML
+  Rendered electoral_districts/_form.html.erb (22.4ms)
+  Rendered electoral_districts/new.html.erb within layouts/application (29.3ms)
+Completed 200 OK in 214.8ms (Views: 75.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-27 23:18:28 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/add_login_to_users.css?body=1" for 127.0.0.1 at 2015-01-27 23:18:28 +0100
+Served asset /add_login_to_users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-01-27 23:18:28 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/electoral_districts.css?body=1" for 127.0.0.1 at 2015-01-27 23:18:28 +0100
+Served asset /electoral_districts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-27 23:18:28 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/committees.css?body=1" for 127.0.0.1 at 2015-01-27 23:18:28 +0100
+Served asset /committees.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/voivodship_committees.css?body=1" for 127.0.0.1 at 2015-01-27 23:18:28 +0100
+Served asset /voivodship_committees.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/voivodships.css?body=1" for 127.0.0.1 at 2015-01-27 23:18:28 +0100
+Served asset /voivodships.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/votes.css?body=1" for 127.0.0.1 at 2015-01-27 23:18:28 +0100
+Served asset /votes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-27 23:18:28 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-27 23:18:28 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/add_login_to_users.js?body=1" for 127.0.0.1 at 2015-01-27 23:18:28 +0100
+Served asset /add_login_to_users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/committees.js?body=1" for 127.0.0.1 at 2015-01-27 23:18:29 +0100
+Served asset /committees.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/electoral_districts.js?body=1" for 127.0.0.1 at 2015-01-27 23:18:29 +0100
+Served asset /electoral_districts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-01-27 23:18:29 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/voivodship_committees.js?body=1" for 127.0.0.1 at 2015-01-27 23:18:29 +0100
+Served asset /voivodship_committees.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/voivodships.js?body=1" for 127.0.0.1 at 2015-01-27 23:18:29 +0100
+Served asset /voivodships.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/votes.js?body=1" for 127.0.0.1 at 2015-01-27 23:18:29 +0100
+Served asset /votes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-27 23:18:29 +0100
+Served asset /application.js - 304 Not Modified (2ms)
