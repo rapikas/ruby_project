@@ -14,7 +14,11 @@ group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
 
-gem 'activeadmin',         github: 'gregbell/active_admin'
+
+gem 'activeadmin',         github: 'activeadmin'
+gem 'devise'
+
+
 
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
@@ -24,6 +28,8 @@ gem 'activeadmin',         github: 'gregbell/active_admin'
 end
 
 gem 'jquery-rails'
+
+gem 'paperclip', '~> 4.2.1'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

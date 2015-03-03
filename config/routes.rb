@@ -1,7 +1,9 @@
 Elections::Application.routes.draw do
-  ActiveAdmin.routes(self)
 
-  resources :add_login_to_users
+
+  devise_for :admin_users, ActiveAdmin::Devise.config
+
+  ActiveAdmin.routes(self)
 
 
   resources :votes
@@ -16,7 +18,10 @@ Elections::Application.routes.draw do
   resources :voivodship_committees
 
 
-  resources :voivodships
+  resources :voivodships do
+    resources :electoral_districts
+  end
+
 
 
   resources :committees
